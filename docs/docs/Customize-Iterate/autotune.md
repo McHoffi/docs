@@ -187,12 +187,13 @@ Mac install commands:
 * Install the latest version of oref0: 
 
 ```
-npm list -g oref0 | egrep oref0@0.5.[5-9] || (echo Installing latest oref0 package && sudo npm install -g oref0)
+npm list -g oref0 | egrep oref0@0.5.[5-9] || (echo Installing latest oref0 package && sudo npm install -g oref0 --save)
 ```
 
 * If you need the dev version of oref0 (for example, to run autotune with AndroidAPS as of August 2018):
 
 ```
+mkdir ~/src
 cd ~/src && git clone git://github.com/openaps/oref0.git || (cd oref0 && git checkout dev && git pull)
 cd ~/src/oref0 && npm run global-install
 ```
